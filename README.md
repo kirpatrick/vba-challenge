@@ -3,9 +3,6 @@ Analysis of stock market data using VBA
 
 <img src="images/under-construction.png" alt="drawing" width="500"/>
 
-# Link to Live project or report
-[Shared Scripts](https://drive.google.com/drive/folders/1GeyQUe3bgg3JqCSk42CmnGd7fGhKqGFI?usp=sharing)
-
 # Project Overview
 ## SMU Data Science Boot Camp Visual Basic Activity
 
