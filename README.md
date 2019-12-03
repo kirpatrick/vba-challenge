@@ -1,7 +1,7 @@
 # vba-challenge
 Analysis of stock market data using VBA
 
-![Under Construction](images\under-construction.png)
+![under construction](images/under-construction.png)
 
 # Link to Live project or report
 [Shared Scripts](https://drive.google.com/drive/folders/1GeyQUe3bgg3JqCSk42CmnGd7fGhKqGFI?usp=sharing)
