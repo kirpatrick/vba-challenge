@@ -6,7 +6,7 @@ Analysis of stock market data using VBA
 # Project Overview
 ## SMU Data Science Boot Camp Visual Basic Activity
 
-### Instructions / Functionality
+### Instructions / Functionality / Design
 * Create a VB script that will loop through all the stocks for one year for each run and take the following information.
     - The ticker symbol.
     - Yearly change from opening price at the beginning of a given year to the closing price at the end of that year.
@@ -20,8 +20,6 @@ Analysis of stock market data using VBA
 
 ### Source
 [SMU DS Boot Camp - VBA Scripting Challenge](https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/SMU-DAL-DATA-PT-11-2019-U-C/tree/master/02-Homework/02-VBA-Scripting/Instructions)
-
-# Design
 
 # Run Locally
 Note:  Need to update the repo and scripts to enable 'button click' from 1st sheet
