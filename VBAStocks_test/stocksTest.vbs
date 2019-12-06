@@ -81,7 +81,11 @@ Sub stocksTest()
                 End If
                 
                 ' ***** Percent Change *****
-                Cells(tickerIndex, 11).Value = (yearEndPrice - yearBeginPrice) / yearBeginPrice
+                If yearBeginPrice <> 0 Then
+                    Cells(tickerIndex, 11).Value = (yearEndPrice - yearBeginPrice) / yearBeginPrice
+                Else
+                    Cells(tickerIndex, 11).Value = 0
+                End If
                 
                 ' Format Yearly Percent Change output to percentage with 2 decimal places
                 Cells(tickerIndex, 11).NumberFormat = "0.00%"
