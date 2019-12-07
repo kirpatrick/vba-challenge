@@ -1,4 +1,4 @@
-Sub stocksTest()
+Sub stocksTest_multipleSheets()
     
     ' Declare variables to time execution
     Dim beginTimeSec As Single

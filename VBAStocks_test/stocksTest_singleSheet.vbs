@@ -1,4 +1,4 @@
-Sub stocksTest()
+Sub stocksTest_singleSheet()
 
     ' Declare variables to time execution
     Dim beginTimeSec As Single
@@ -34,6 +34,10 @@ Sub stocksTest()
     'Hold greatestPercentDecrease variables
     Dim greatestPercentDecrease As Double
     Dim greatestPercentDecreaseTicker As String
+    
+    'Hold greatestTotalVolume variables
+    Dim greatestTotalVolume As Variant
+    Dim greatestTotalVolumeTicker As String
 
     '***** Sort the data set by <date> *****
     ' May not be needed for this exercise
@@ -52,6 +56,7 @@ Sub stocksTest()
     tickerIndex = 2
     greatestPercentIncrease = 0
     greatestPercentDecrease = 0
+    greatestTotalVolume = 0
     recordCount = ActiveSheet.UsedRange.Rows.Count
 
     ' ***** Print column headers for output *****
@@ -60,8 +65,9 @@ Sub stocksTest()
     Range("K1").Value = "Percent Change"
     Range("L1").Value = "Total Stock Volume"
     
-    Range("O2").Value = "Greatest % increase"
+    Range("O2").Value = "Greatest % Increase"
     Range("O3").Value = "Greatest % Decrease"
+    Range("O4").Value = "Greatest Total Volume"
     Range("P1").Value = "Ticker"
     Range("Q1").Value = "Value"
 
@@ -119,6 +125,12 @@ Sub stocksTest()
                 
                 ' ***** Total Stock Volume *****
                 Cells(tickerIndex, 12).Value = totalVolume
+                
+                'Check & set greatest TotalVolume
+                If Cells(tickerIndex, 12).Value > greatestTotalVolume Then
+                    greatestTotalVolume = Cells(tickerIndex, 12).Value
+                    greatestTotalVolumeTicker = ticker
+                End If
             
             ' Start data capture for new ticker
             
@@ -149,6 +161,7 @@ Sub stocksTest()
 
     Next i
     
+    ' If all records have been viewed, update the year end analysis table
     Range("P2").Value = greatestPercentIncreaseTicker
     Range("Q2").Value = greatestPercentIncrease
     Range("Q2").NumberFormat = "0.00%"
@@ -156,6 +169,9 @@ Sub stocksTest()
     Range("P3").Value = greatestPercentDecreaseTicker
     Range("Q3").Value = greatestPercentDecrease
     Range("Q3").NumberFormat = "0.00%"
+    
+    Range("P4").Value = greatestTotalVolumeTicker
+    Range("Q4").Value = greatestTotalVolume
     
     endTimeSec = Timer()
     
