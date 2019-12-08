@@ -1,5 +1,8 @@
 Sub stocksTest_multipleSheets()
     
+    ' Confirm script execution
+    MsgBox ("Analyzing data from all sheets...")
+    
     ' Declare variables to time execution
     Dim beginTimeSec As Single
     Dim endTimeSec As Single
@@ -34,6 +37,10 @@ Sub stocksTest_multipleSheets()
     'Hold greatestPercentDecrease variables
     Dim greatestPercentDecrease As Double
     Dim greatestPercentDecreaseTicker As String
+    
+    'Hold greatestTotalVolume variables
+    Dim greatestTotalVolume As Variant
+    Dim greatestTotalVolumeTicker As String
 
     '***** Sort the data set by <date> *****
     ' May not be needed for this exercise
@@ -45,7 +52,7 @@ Sub stocksTest_multipleSheets()
     ' and ordered by <date> within each ticker group.
     
     'Iterate through all sheets
-    For j = 1 To Sheets.Count
+    For j = 2 To Sheets.Count
     
         ' ***** initialize all variables *****
         ticker = Sheets(j).Range("A2").Value
@@ -55,6 +62,7 @@ Sub stocksTest_multipleSheets()
         tickerIndex = 2
         greatestPercentIncrease = 0
         greatestPercentDecrease = 0
+        greatestTotalVolume = 0
         recordCount = ActiveSheet.UsedRange.Rows.Count
     
         ' ***** Print column headers for output *****
@@ -65,6 +73,7 @@ Sub stocksTest_multipleSheets()
     
         Sheets(j).Range("O2").Value = "Greatest % increase"
         Sheets(j).Range("O3").Value = "Greatest % Decrease"
+        Sheets(j).Range("O4").Value = "Greatest Total Volume"
         Sheets(j).Range("P1").Value = "Ticker"
         Sheets(j).Range("Q1").Value = "Value"
     
@@ -123,6 +132,12 @@ Sub stocksTest_multipleSheets()
                     ' ***** Total Stock Volume *****
                     Sheets(j).Cells(tickerIndex, 12).Value = totalVolume
                 
+                    'Check & set greatest TotalVolume
+                    If Sheets(j).Cells(tickerIndex, 12).Value > greatestTotalVolume Then
+                        greatestTotalVolume = Sheets(j).Cells(tickerIndex, 12).Value
+                        greatestTotalVolumeTicker = ticker
+                    End If
+                
                 ' Start data capture for new ticker
                 
                     ' Retain next output row index for new ticker data
@@ -152,6 +167,7 @@ Sub stocksTest_multipleSheets()
     
         Next i
         
+        ' If all records have been viewed, update the year end analysis table
         Sheets(j).Range("P2").Value = greatestPercentIncreaseTicker
         Sheets(j).Range("Q2").Value = greatestPercentIncrease
         Sheets(j).Range("Q2").NumberFormat = "0.00%"
@@ -160,11 +176,16 @@ Sub stocksTest_multipleSheets()
         Sheets(j).Range("Q3").Value = greatestPercentDecrease
         Sheets(j).Range("Q3").NumberFormat = "0.00%"
     
+        Sheets(j).Range("P4").Value = greatestTotalVolumeTicker
+        Sheets(j).Range("Q4").Value = greatestTotalVolume
+    
     'Process next sheet
     Next j
     
     endTimeSec = Timer()
     
+    ' Confirm script completion
+    MsgBox ("Analysis Complete!")
     MsgBox ("Runtime:  " & endTimeSec - beginTimeSec & " seconds")
     
     '************** Utilities **************
