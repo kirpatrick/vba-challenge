@@ -1,4 +1,4 @@
-Sub stocksTest_singleSheet()
+Sub stockAnalysis_singleYear()
 
     MsgBox ("Analyzing data from this sheet...")
 

@@ -1,4 +1,4 @@
-Sub stocksTest_multipleSheets()
+Sub stockAnalysis_multipleYears()
     
     ' Confirm script execution
     MsgBox ("Analyzing data from all sheets...")
