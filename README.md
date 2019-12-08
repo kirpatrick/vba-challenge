@@ -9,7 +9,7 @@ Analysis of stock market data using VBA
 ### Instructions / Functionality / Design
 
 #### Given
-Stock data, in Microsoft Excel format, for multiple years.  Each tab represents a different year of data and contains daily company stock information as follows:
+Stock Market data, in Microsoft Excel format, for multiple years.  Each tab represents a different year of data and contains daily company stock information as follows:
 - Ticker symbol
 - Date
 - Opening Price
@@ -34,10 +34,12 @@ Stock data, in Microsoft Excel format, for multiple years.  Each tab represents 
 [SMU DS Boot Camp - VBA Scripting Challenge](https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/SMU-DAL-DATA-PT-11-2019-U-C/tree/master/02-Homework/02-VBA-Scripting/Instructions)
 
 # Solution
-1. Download the Excel workbook *'Multiple_year_stock_data_analysis.xlsm'* from this repository.
-2. Open the workbook.  This make take a few seconds given the file's size.
+1. Download the Excel workbook [vba-challenge/VBAStocks/Multiple_year_stock_data_analysis.xlsm](https://github.com/kirpatrick/vba-challenge/blob/master/VBAStocks/Multiple_year_stock_data_analysis.xlsm).
+2. Open the downloaded workbook.  This make take a few seconds given the file's size.
 3. Enable Macros.
-4. Follow the directions on the 'Instructions' tab.
+4. See the Instructions' tab in the workbook for VB script execution.
+
+Individual execution scripts can be found in the [vba-challenge/VBAStocks](https://github.com/kirpatrick/vba-challenge/tree/master/VBAStocks) directory.
 
 # Tech Stack
 - Microsoft Excel 2016 or later
