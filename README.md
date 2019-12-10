@@ -39,6 +39,8 @@ Stock Market data, in Microsoft Excel format, for multiple years.  Each tab repr
 3. Enable Macros.
 4. See the Instructions' tab in the workbook for VB script execution.
 
+[Multi Year Stock Data Screenshots](https://github.com/kirpatrick/vba-challenge/blob/master/VBAStocks/MultiYear_Stock_Analysis%E2%80%93Summary_Screenshots.pdf)
+
 Individual execution scripts can be found in the [vba-challenge/VBAStocks](https://github.com/kirpatrick/vba-challenge/tree/master/VBAStocks) directory.
 
 # Tech Stack
