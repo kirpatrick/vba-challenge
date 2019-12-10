@@ -35,7 +35,7 @@ Stock Market data, in Microsoft Excel format, for multiple years.  Each tab repr
 
 # Solution
 1. Download the Excel workbook [vba-challenge/VBAStocks/Multiple_year_stock_data_analysis.xlsm](https://github.com/kirpatrick/vba-challenge/blob/master/VBAStocks/Multiple_year_stock_data_analysis.xlsm).
-2. Open the downloaded workbook.  This make take a few seconds given the file's size.
+2. Open the downloaded workbook.  This may take a few seconds given the file's size.
 3. Enable Macros.
 4. See the Instructions' tab in the workbook for VB script execution.
 
