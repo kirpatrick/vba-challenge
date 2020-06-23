@@ -44,4 +44,4 @@ Stock Market data, in Microsoft Excel format, for multiple years.  Each tab repr
 Individual execution scripts can be found in the [vba-challenge/VBAStocks](https://github.com/kirpatrick/vba-challenge/tree/master/VBAStocks) directory.
 
 # Tech Stack
-- Microsoft Excel 2016 or later
+- Microsoft Excel 2016
