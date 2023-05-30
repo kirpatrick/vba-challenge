@@ -31,7 +31,7 @@ Stock Market data, in Microsoft Excel format, for multiple years.  Each tab repr
 2.	Make the appropriate adjustments to your VBA script that will allow it to run on every worksheet, i.e., every year, just by running the VBA script once.
 
 ### Source
-[SMU DS Boot Camp - VBA Scripting Challenge](https://smu.bootcampcontent.com/SMU-Coding-Bootcamp/SMU-DAL-DATA-PT-11-2019-U-C/tree/master/02-Homework/02-VBA-Scripting/Instructions)
+[SMU DS Boot Camp - VBA Scripting Challenge](https://techbootcamps.smu.edu/data/)
 
 # Solution
 1. Download the Excel workbook [vba-challenge/VBAStocks/Multiple_year_stock_data_analysis.xlsm](https://github.com/kirpatrick/vba-challenge/blob/master/VBAStocks/Multiple_year_stock_data_analysis.xlsm).
